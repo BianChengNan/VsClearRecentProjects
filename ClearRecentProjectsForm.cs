@@ -27,7 +27,7 @@ namespace VsClearRecentProjects
                 checkBox_vs2015,
                 checkBox_vs2017,
                 checkBox_vs2019,
-                checkBox_vs17,
+                checkBox_vsNext,
             };
 
             vsVersionMapping = new Dictionary<CheckBox, Version>
@@ -40,6 +40,7 @@ namespace VsClearRecentProjects
                 { checkBox_vs2015, new Version(14, 0) },
                 { checkBox_vs2017, new Version(15, 0) },
                 { checkBox_vs2019, new Version(16, 0) },
+                { checkBox_vsNext, new Version(17, 0) },
             };
 
             checkBox_All.Checked = true;

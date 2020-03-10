@@ -38,7 +38,7 @@
             this.checkBox_vs2015 = new System.Windows.Forms.CheckBox();
             this.checkBox_vs2017 = new System.Windows.Forms.CheckBox();
             this.checkBox_vs2019 = new System.Windows.Forms.CheckBox();
-            this.checkBox_vs17 = new System.Windows.Forms.CheckBox();
+            this.checkBox_vsNext = new System.Windows.Forms.CheckBox();
             this.button_clear = new System.Windows.Forms.Button();
             this.button_close = new System.Windows.Forms.Button();
             this.groupBox_vs.SuspendLayout();
@@ -46,7 +46,7 @@
             // 
             // groupBox_vs
             // 
-            this.groupBox_vs.Controls.Add(this.checkBox_vs17);
+            this.groupBox_vs.Controls.Add(this.checkBox_vsNext);
             this.groupBox_vs.Controls.Add(this.checkBox_All);
             this.groupBox_vs.Controls.Add(this.checkBox_vs2019);
             this.groupBox_vs.Controls.Add(this.checkBox_vs2017);
@@ -64,14 +64,14 @@
             // 
             // checkBox_vs17
             // 
-            this.checkBox_vs17.AutoSize = true;
-            this.checkBox_vs17.Location = new System.Drawing.Point(250, 79);
-            this.checkBox_vs17.Name = "checkBox_vs17";
-            this.checkBox_vs17.Size = new System.Drawing.Size(125, 19);
-            this.checkBox_vs17.TabIndex = 9;
-            this.checkBox_vs17.Text = "vs_Next(17?)";
-            this.checkBox_vs17.UseVisualStyleBackColor = true;
-            this.checkBox_vs17.CheckedChanged += new System.EventHandler(this.CheckBox_vs_CheckedChanged);
+            this.checkBox_vsNext.AutoSize = true;
+            this.checkBox_vsNext.Location = new System.Drawing.Point(250, 79);
+            this.checkBox_vsNext.Name = "checkBox_vs17";
+            this.checkBox_vsNext.Size = new System.Drawing.Size(125, 19);
+            this.checkBox_vsNext.TabIndex = 9;
+            this.checkBox_vsNext.Text = "vs_Next(17?)";
+            this.checkBox_vsNext.UseVisualStyleBackColor = true;
+            this.checkBox_vsNext.CheckedChanged += new System.EventHandler(this.CheckBox_vs_CheckedChanged);
             // 
             // checkBox_All
             // 
@@ -223,7 +223,7 @@
         private System.Windows.Forms.CheckBox checkBox_vs2015;
         private System.Windows.Forms.CheckBox checkBox_vs2017;
         private System.Windows.Forms.CheckBox checkBox_vs2019;
-        private System.Windows.Forms.CheckBox checkBox_vs17;
+        private System.Windows.Forms.CheckBox checkBox_vsNext;
         private System.Windows.Forms.Button button_clear;
         private System.Windows.Forms.Button button_close;
     }
