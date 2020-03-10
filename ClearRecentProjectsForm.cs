@@ -114,7 +114,7 @@ namespace VsClearRecentProjects
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format("Remove Key failed with Exception {0}", ex.ToString()));
+                MessageBox.Show(string.Format("Remove Key failed with Exception:\n {0}", ex.ToString()));
             }
         }
 
@@ -132,8 +132,12 @@ namespace VsClearRecentProjects
 
         private void RemoveFromRegistry(Version vsVersion)
         {
-            Registry.CurrentUser.DeleteSubKey(string.Format("\\Software\\Microsoft\\VisualStudio\\{0}.{1}\\FileMRUList", vsVersion.Major, vsVersion.Minor));
-            Registry.CurrentUser.DeleteSubKey(string.Format("\\Software\\Microsoft\\VisualStudio\\{0}.{1}\\ProjectMRUList", vsVersion.Major, vsVersion.Minor));
+            var subKeyPath = string.Format("\\Software\\Microsoft\\VisualStudio\\{0}.{1}\\ProjectMRUList", vsVersion.Major, vsVersion.Minor);
+            var subKey = Registry.CurrentUser.OpenSubKey(subKeyPath);
+            if (null != subKey)
+            {
+                Registry.CurrentUser.DeleteSubKey(subKeyPath);
+            }
         }
 
         private void RemoveFromFile(Version vsVersion)
